@@ -1,0 +1,5 @@
+rootProject.name = 'SampleReact'
+include ':react-native-nfc-card-reader'
+project(':react-native-nfc-card-reader').projectDir = new File(rootProject.projectDir, '../../react-native-nfc-card-reader/android')
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
