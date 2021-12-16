@@ -4,6 +4,7 @@ import NfcCardReader from 'react-native-nfc-card-reader'
 
 
 
+
 export default class App extends Component {
 
 
@@ -11,7 +12,8 @@ export default class App extends Component {
     cardNumber : null,
     expiryDate : null,
     cardType : null,
-
+    firstname : null,
+    surname : null,
  }
 
 
@@ -22,6 +24,8 @@ export default class App extends Component {
      that.setState({cardNumber : cardDetails.cardNumber})
      that.setState({expiryDate : cardDetails.expiryDate})
      that.setState({cardType : cardDetails.cardType})
+     that.setState({firstname : cardDetails.firstname})
+     that.setState({surname : cardDetails.surname})
 
     })
  }
@@ -32,6 +36,8 @@ export default class App extends Component {
     <Text>{this.state.cardNumber}</Text>
     <Text>{this.state.expiryDate}</Text>
     <Text>{this.state.cardType}</Text>
+    <Text>{this.state.firstname}</Text>
+    <Text>{this.state.lastname}</Text>
 
   </View>
 
